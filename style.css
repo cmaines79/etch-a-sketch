@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    height: 500px;
+    width: 500px;
+}
+
+.draw {
+    background-color: blue;
+}
