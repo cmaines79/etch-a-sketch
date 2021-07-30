@@ -58,10 +58,6 @@ body {
     transition: all .3s eas-in-out;
 }
 
-.btn:active {
-    box-shadow: 0 0 1.875rem rgba(2, 0, 36, 1), 0 0 0.125rem rgba(2, 0, 36, 1) inset;
-}
-
 .roundBtn {
     width: 5rem;
     height: 5rem;
@@ -75,7 +71,7 @@ body {
     margin: 1.5625rem 0.625rem;
 }
 
-.roundBtn:active {
+.active {
     box-shadow: 0 0 1.875rem rgba(2, 0, 36, 1), 0 0 0.125rem rgba(2, 0, 36, 1) inset;
 }
 

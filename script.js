@@ -9,7 +9,7 @@ let sectionElHeight = sectionEl.offsetHeight;
 let sectionElWidth = sectionEl.offsetWidth;
 
 // Global Variables
-let gridSize = 16;                  // setting default grid size
+let gridSize = 20;                  // setting default grid size
 let gridColor = 'black';            // setting default grid color
 let randomColor = 0;                // setting randomColor to false by default
 
@@ -63,16 +63,46 @@ function getRandomColor(){
 // using a listener to find the div that is being hovered over and changing the background color
 const hoverListener = document.querySelector('.container').addEventListener('mouseover', (e) => {
     // assign a variable to the targeted div
-    let targetDiv = document.getElementById(e.target.id);
+    let targetDivEl = document.getElementById(e.target.id);
 
     // change the background color (consistant or random color)
     if(randomColor == 0){
-        targetDiv.style.backgroundColor = gridColor;
+        targetDivEl.style.backgroundColor = gridColor;
     } else {
-        targetDiv.style.backgroundColor = getRandomColor();
+        targetDivEl.style.backgroundColor = getRandomColor();
     }
 
 });
+
+// using a listener on the .userInput div to identify specific buttons based on their class and updating classLists to show active and inactive states
+const btnListener = document.querySelector('.userInput').addEventListener('click', (e) =>{
+    // We have two segments of buttons.  The round buttons and the retangular buttons
+    // if/else statement to segregate the round and square buttons and update them accordingly
+    if(e.target.id == '10' || e.target.id == '20' || e.target.id == '30'){
+        btnActiveEl = document.querySelectorAll('.roundBtn');
+
+        // remove all other instances of .active classes
+        for(let i = 0; i < btnActiveEl.length; i++){
+            btnActiveEl[i].classList.remove('active')
+        }
+
+        // add .active class to the button that was just clicked
+        e.target.classList.add('active');
+    } else {
+        
+        btnActiveEl = document.querySelectorAll('.btn');
+
+        // remove all other instances of .active classes
+        for(let i = 0; i < btnActiveEl.length; i++){
+            btnActiveEl[i].classList.remove('active');
+        }
+        
+        // add .active class to the button that was just clicked
+        e.target.classList.add('active');
+    }
+});
+
+
 
 // using a listener to determine which button is being clicked and take the appropriate action.
 const buttonListener = document.querySelector('.userInput').addEventListener('click', function(e){
