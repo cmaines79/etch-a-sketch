@@ -4,11 +4,107 @@
     margin: 0;
 }
 
+body {
+    background: rbg(2, 0, 36);
+    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(33, 126, 223, 1)23%, rgba(0, 212, 255,1 )100%);
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+
+.header h1{
+    margin: 1.25rem;
+    font-size: 3rem;
+    text-shadow: 0 0 13px white;
+}
+
+.header p{
+    width: 31.25rem;
+    margin: 0 auto;
+}
+
+.userInput {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.color {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    border-radius: 0.3125rem;
+    color: white;
+    background-color: transparent;
+    box-shadow: 0 0 0.625rem white, 0 0 0.625rem white inset;
+    padding: 0.625rem;
+    align-items: center;
+    margin: 0.4375rem;
+    cursor: pointer;
+    text-align: center;
+    width: 5rem;
+    transition: all .3s eas-in-out;
+}
+
+.btn:active {
+    box-shadow: 0 0 1.875rem rgba(2, 0, 36, 1), 0 0 0.125rem rgba(2, 0, 36, 1) inset;
+}
+
+.roundBtn {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    font-size: 1.3rem;
+    background-color: transparent;
+    box-shadow: 0 0 0.625rem white, 0 0 0.625rem white inset;
+    cursor: pointer;
+    margin: 1.5625rem 0.625rem;
+}
+
+.roundBtn:active {
+    box-shadow: 0 0 1.875rem rgba(2, 0, 36, 1), 0 0 0.125rem rgba(2, 0, 36, 1) inset;
+}
+
+.clear {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 5rem;
+}
+
 .container {
-    height: 500px;
-    width: 500px;
+    height: 31.25rem;
+    width: 31.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    box-shadow: 0 0 0.625rem black;
+    margin-bottom: 1.25rem;
 }
 
 .draw {
-    background-color: blue;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, .25);
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 1.25rem;
 }
